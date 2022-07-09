@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useGif from "../hooks/useGif";
 import GetGifs from "../services/GetGifs";
 import Gifs from "./Gifs";
 import Links from "./Links";
@@ -31,7 +32,7 @@ const ListOfGifs = ({ keyword }) => {
     <>
       <div className="contenedor2">
         <div className="listaDeGifs">
-          {gif.map(({ id, url, title, slug }) => (
+          {gif.map(({ id, url, title, slug, imgOriginalUrl }) => (
             <Gifs
               key={id}
               url={url}
@@ -39,14 +40,9 @@ const ListOfGifs = ({ keyword }) => {
               id={id}
               slug={slug}
               alt={title}
+              imgOriginalUrl={imgOriginalUrl}
             />
           ))}
-        </div>
-      </div>
-      <div>
-        <h3>Top trending</h3>
-        <div className="contenedorTrending">
-          <Links limit={10} />
         </div>
       </div>
     </>

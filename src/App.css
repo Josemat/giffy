@@ -53,6 +53,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 .trending-container{
   display: flex;
@@ -99,6 +100,14 @@
 }
 .inputBusqueda{
   width: 70%;
+}
+.footer{
+  font-size: 10px;
+  background-color: rgba(0,0,0,0.5);
+}
+.resultadoGif{
+  padding: 20px;
+  margin: 20px;
 }
 h3{
   max-height: 50px;

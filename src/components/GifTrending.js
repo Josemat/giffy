@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "wouter";
+import useGif from "../hooks/useGif";
 
-const GifTrending = ({ img, title, url, id }) => {
+const GifTrending = ({ img, title, id, imgOriginalUrl }) => {
+  const { setGifURL } = useGif();
   return (
     <div className="trending-container">
-      <a href={url} className="trendingimg" id={id}>
+      <Link
+        to={`/search/gif/${title}`}
+        className="trendingimg"
+        id={id}
+        onClick={() => setGifURL(imgOriginalUrl)}
+      >
         <img src={img} alt={title} />
         <small>{title}</small>
-      </a>
+      </Link>
     </div>
   );
 };

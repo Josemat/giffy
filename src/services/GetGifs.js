@@ -4,8 +4,8 @@ const GetGifs = async ({ keyword }) => {
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
     const { data } = resultado;
-    // console.log(data);
     const gif = data.map((element) => ({
+      imgOriginalUrl: element.images.original.url,
       slug: element.slug,
       url: element.images.downsized_medium.url,
       id: element.id,

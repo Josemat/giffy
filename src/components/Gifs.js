@@ -1,9 +1,19 @@
 import { Link } from "wouter";
-const Gifs = ({ url, id, title, slug }) => {
+import useGif from "../hooks/useGif";
+const Gifs = ({ url, id, title, slug, imgOriginalUrl }) => {
+  // console.log(imgOriginalUrl);
+  const { setGifURL } = useGif();
   return (
     <>
       <div className="cuadradito">
-        <Link to={`este/${slug}`} id={id} className="linkCuadradito">
+        <Link
+          to={`gif/${slug}`}
+          id={id}
+          className="linkCuadradito"
+          onClick={() => {
+            setGifURL(imgOriginalUrl);
+          }}
+        >
           <small>{title} </small>
           <img src={url} alt={title} className="gifSize" />
         </Link>
