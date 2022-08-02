@@ -1,5 +1,5 @@
-const GetGifs = async ({ keyword }) => {
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=uj6z9p9PI5L2KGk2GNq9tqI0AulfYYYL&q=${keyword}&limit=20`;
+const GetGifs = async ({ keyword, offset }) => {
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=uj6z9p9PI5L2KGk2GNq9tqI0AulfYYYL&q=${keyword}&offset=${offset}&limit=10`;
   try {
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
