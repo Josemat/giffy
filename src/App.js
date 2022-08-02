@@ -5,10 +5,9 @@ import Links from "./components/Links";
 import BusquedaInput from "./components/BusquedaInput";
 import { GifProvider } from "./context/GifProvider";
 import ClickedGif from "./components/ClickedGif";
-import useGif from "./hooks/useGif";
 
 function App() {
-  const [match, params] = useRoute("/search/:id");
+  const [match] = useRoute("/search/:id");
   const [matchBusqueda, paramsBusqueda] = useRoute("/search/gif/:id");
   return (
     <>

@@ -36,7 +36,7 @@ const ListOfGifs = ({ keyword }) => {
           ))}
         </div>
       </div>
-      <button onClick={() => setOffset()}>Siguiente</button>
+      {/* <button onClick={() => setOffset()}>Siguiente</button> */}
     </>
   );
 };

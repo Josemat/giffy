@@ -6,7 +6,7 @@ const ClickedGif = (params) => {
   const { gifURL } = useGif();
   return (
     <div className="resultadoGif">
-      <img src={gifURL} />
+      <img src={gifURL} alt={titulo} />
       <p className="footer">{titulo}</p>
     </div>
   );
