@@ -23,7 +23,7 @@ function App() {
             <Route path="/search/gif/:gif">
               <ClickedGif value={paramsBusqueda} />
             </Route>
-            {!match && !matchBusqueda ? <Links limit={10} /> : null}
+            {!match && !matchBusqueda ? <Links /> : null}
 
             <Route path="/search/:busqeda">
               {(params) => <ListOfGifs keyword={params.busqeda} />}

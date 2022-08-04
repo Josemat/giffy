@@ -37,14 +37,21 @@
   align-items: center;
 }
 .gifSize{
-  max-height: 150px;
   max-width: 200px;
   border-radius: 5px;
 }
 .listaDeGifs{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  max-width: auto;
+  min-height: 100vh;
+  margin: 20px;
+}
+.infinite{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   max-width: auto;
   margin: 20px;
 }
@@ -84,12 +91,12 @@
   font-size: 15px;
 }
 .cuadradito{
-  width: 250px;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.2);
+  min-width: 250px;
+  max-width: min-content;
+  min-height: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 5px;
   border-radius: 15px;
-  box-shadow: 0px 10px 13px -7px #000000;
 }
 .linkCuadradito{
   height: 100%;
@@ -108,6 +115,9 @@
 .resultadoGif{
   padding: 20px;
   margin: 20px;
+}
+small{
+  font-size: 16px;
 }
 h3{
   max-height: 50px;
