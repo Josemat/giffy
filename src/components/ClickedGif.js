@@ -2,7 +2,7 @@ import React from "react";
 import useGif from "../hooks/useGif";
 
 const ClickedGif = (params) => {
-  const titulo = params.value.id;
+  const titulo = decodeURI(params.value.id);
   const { gifURL } = useGif();
   return (
     <div className="resultadoGif">
