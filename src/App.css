@@ -69,7 +69,7 @@
   margin: 3px;
   width: 110px;
   height: 160px;
-  border: solid 1px white;
+  border: solid 1px rgba(255, 255, 255, 0.078);
   border-radius: 5px;
 }
 
