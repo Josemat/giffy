@@ -7,7 +7,7 @@ const Gifs = ({ url, id, title, slug, imgOriginalUrl }) => {
     <>
       <div className="cuadradito">
         <Link
-          to={`gif/${slug}`}
+          to={`gif/${id}`}
           id={id}
           className="linkCuadradito"
           onClick={() => {

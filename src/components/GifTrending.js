@@ -7,9 +7,10 @@ const GifTrending = ({ img, title, id, imgOriginalUrl }) => {
   return (
     <div className="trending-container">
       <Link
-        to={`/search/gif/${title}`}
+        to={`/search/gif/${id}`}
         className="trendingimg"
         id={id}
+        title={title}
         onClick={() => setGifURL(imgOriginalUrl)}
       >
         <img src={img} alt={title} />

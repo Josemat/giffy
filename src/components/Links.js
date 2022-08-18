@@ -13,7 +13,6 @@ const Links = ({ limit }) => {
         <h3>Top Trending</h3>
         <div className="contenedorTrending">
           {trend.map((list) => {
-            // console.log(list);
             const imgOriginalUrl = list.images.original.url;
             const url = list.url;
             const imgSmall = list.images.fixed_height_small.url;

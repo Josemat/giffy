@@ -17,7 +17,7 @@ const Intersection = ({ keyword }) => {
 
   useEffect(() => {
     if (isNearScreen) handleDebounce();
-  }, [isNearScreen]);
+  }, [isNearScreen, handleDebounce]);
 
   useEffect(() => {
     if (offset === INITIAL_PAGE) return;
