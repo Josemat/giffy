@@ -29,9 +29,14 @@ const ClickedGif = (params) => {
       <p className="footer">{titulo}</p>
       <small>frames: {frames}</small>
       <br />
-      <small>
-        source: <a href={source}>{source}</a>
-      </small>
+      {source ? (
+        <small>
+          source:{" "}
+          <a className="footer" href={source}>
+            {source}
+          </a>
+        </small>
+      ) : null}
     </div>
   );
 };
